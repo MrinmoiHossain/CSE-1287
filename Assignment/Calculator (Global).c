@@ -8,19 +8,21 @@ int main(void)
     char ch;
     double res;
 
-    printf("Enter an operator(+, -, *, /):\n");
+    printf("Enter an operator(+, -, *, /): ");
     ch = getchar();
 
     if(ch == '+' || ch == '-' || ch == '*' || ch == '/'){
         printf("Enter two numbers: ");
         scanf("%d %d", &a, &b);
         res = calculator(a, b, ch);
+
+        printf("The result is: %0.2lf\n", res);
     }
     else{
         printf("You entered wrong operator\n");
     }
 
-    printf("The result is: %0.2lf\n", res);
+    return 0;
 }
 
 double calculator(int x, int y, char opr)
